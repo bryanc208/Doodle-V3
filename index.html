@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		<script src="js/script.js"></script>
+        <script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+		<script src="js/jquery.getimagedata.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/path.min.js"></script>
+		
+		<title>Doodle</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="colorpicker/css/colorpicker.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+			<div id="top">
+				<div id="topCont">
+					<div id="colorSelector"></div>
+					<form class="text">
+						<div class="input-group" style="display: inline-block">
+							<label class="btn btn-default">
+								<input type="radio" name="editType" value="Text" id="text" checked=True> <span class="glyphicon glyphicon-font"></span>
+							</label>
+							<label class="btn btn-default">
+								<input type="radio" name="editType" value="Draw" id="draw"> <span class="glyphicon glyphicon-edit"></span>
+							</label>
+<!-- 						<label class="btn btn-default">
+								<input type="file" id="filePick" name="files[]" multiple /> <span class="glyphicon glyphicon-picture"></span>
+							</label> -->
+						</div>	
+					</form>
+					<div class="btn-group">
+						<button type=button class="btn btn-default btn-lg" id="undo"><span class="glyphicon glyphicon-arrow-left"></span></button>
+						<button type=button class="btn btn-default btn-lg" id="clearButton"><span class="glyphicon glyphicon-trash"></span></button>
+						<button type=button class="btn btn-default btn-lg" id="upload"><span class="glyphicon glyphicon-upload"></span></button>
+					</div>
+				</div>	
+			</div>
+            <div id="container">
+                <div id="textContainer">
+                    <input type="text" id="textToAdd" />
+                </div>
+                <canvas id="canvas"></canvas>
+                <img id="canvasImg">
+                <br>
+                <span id="uploadURL" href=''></span>
+				<br>
+            </div>
+			<div id="selectImages">
+				<h1>Welcome to Doodle!</h1>
+				<h2>Start fresh or select an image to begin.</h2>
+				<br>
+				<div id="startFresh"><a href="#/draw"><img src="startfresh.jpg"></a></div>
+				<div id="pickImage">
+					<div id="pickImageInputs" class="input-group" style="display: inline-block">
+						<label class="btn btn-default">
+							<span class="glyphicon glyphicon-picture"> URL: </span> <input type="text" id="urlPick"/>
+						</label>	
+					<label class="btn btn-default">
+						<input type="file" id="filePick" name="files[]" multiple /> <span class="glyphicon glyphicon-file"></span>
+					</label>
+					</div>
+				</div>
+				<h3>Popular on Imgur:</h3>
+				<div id="imgurcontainer" class="imgContainer"></div>
+				<h3>Recently uploaded from Doodle!:</h3>
+				<div id="uploaded" class="imgContainer"></div>
+<!-- 			<h3>Or use your own!</h3> -->
+			</div>
+			<div id="loading"><img src="loader.gif"/></div>
+        </div>
+    </body>
+
+</html>
+

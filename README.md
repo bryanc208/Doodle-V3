@@ -8,7 +8,8 @@ Added features:
 -Has a start page
 -Uses Imgur API to call up popular images
 -Can point to any image on the web instead of just local images
--Used Parse to keep a record of images that have been uploaded through Doodle! and shows recent uploads.
+-Used Parse to keep a record of images that have been uploaded through Doodle!
+  +Shows recent uploads.
 ```
 The drawing interface remains the same.
 
